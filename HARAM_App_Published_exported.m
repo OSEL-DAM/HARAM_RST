@@ -276,7 +276,7 @@ classdef HARAM_App_Published_exported < matlab.apps.AppBase
             addStyle(app.MitigationTable,MitTblStl)
             app.ExportDataButton.Enable=false;
             app.ExportDataButton.Tooltip = "Run the model to enable the exporting of data.";
-            app.RunScenerioButton.FontWeight = 'normal';
+            app.RunScenerioButton.FontWeight = 'bold';
             app.HARAM_ran=false;
         end
 
@@ -393,8 +393,10 @@ classdef HARAM_App_Published_exported < matlab.apps.AppBase
                 app.HARAM_PlotData.DataHandles = table(DataVar,Handle);
                 
                 % Sets/Resets Flags after running the model
+                app.BoundsPlotOptionsButtonGroup.Enable = UQ.bool;
+                app.ULbSlider.Enable = UQ.bool;
                 app.ExportDataButton.Enable = true;
-                app.ExportDataButton.Tooltip = "Export the analyzed data as either a text, CSV or Excel file. (Ctrl+S)";
+                app.ExportDataButton.Tooltip = "Export the analyzed data as either a CSV, Excel, oe MATLAB Data file. (Ctrl+S)";
                 app.ExportedData = false;
                 app.InputsChngd = false;
                 app.RunScenerioButton.FontWeight = 'normal';
@@ -957,7 +959,7 @@ classdef HARAM_App_Published_exported < matlab.apps.AppBase
             app.RepoductionNumberR0Spinner = uispinner(app.ICGrid);
             app.RepoductionNumberR0Spinner.Limits = [0 Inf];
             app.RepoductionNumberR0Spinner.ValueChangedFcn = createCallbackFcn(app, @BaselineMitSpinnerValueChanged, true);
-            app.RepoductionNumberR0Spinner.Tooltip = {'Reproduction Number of the Infection'};
+            app.RepoductionNumberR0Spinner.Tooltip = {'Reproduction Number of the Infection (R0)'};
             app.RepoductionNumberR0Spinner.Layout.Row = 1;
             app.RepoductionNumberR0Spinner.Layout.Column = [3 5];
 
@@ -971,9 +973,10 @@ classdef HARAM_App_Published_exported < matlab.apps.AppBase
 
             % Create InfectionRecoveryRateMuSpinner
             app.InfectionRecoveryRateMuSpinner = uispinner(app.ICGrid);
-            app.InfectionRecoveryRateMuSpinner.Limits = [0 Inf];
+            app.InfectionRecoveryRateMuSpinner.Step = 0.1;
+            app.InfectionRecoveryRateMuSpinner.Limits = [0 1];
             app.InfectionRecoveryRateMuSpinner.ValueChangedFcn = createCallbackFcn(app, @BaselineMitSpinnerValueChanged, true);
-            app.InfectionRecoveryRateMuSpinner.Tooltip = {'Infection recovery rate'};
+            app.InfectionRecoveryRateMuSpinner.Tooltip = {'Infection recovery rate (Mu)'};
             app.InfectionRecoveryRateMuSpinner.Layout.Row = 2;
             app.InfectionRecoveryRateMuSpinner.Layout.Column = [3 5];
 
