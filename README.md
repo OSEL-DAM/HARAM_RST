@@ -1,12 +1,12 @@
-﻿# Highly Adaptive Risk Assessment Mode (HARAM) Graphical User Interface (GUI)
+# Highly Adaptive Risk Assessment Mode (HARAM) Graphical User Interface (GUI)
 
-**Highly Adaptive Risk Assessment Mode (HARAM) Graphical User Interface (GUI) for the “dynamic-spread” SIR model.**
+**Highly Adaptive Risk Assessment Mode (HARAM) Graphical User Interface (GUI) for the "dynamic-spread" SIR model.**
 
 Written By: Alexander Herman, Gavin D'Souza, Matthew Myers
 U.S. Food and Drug Administration 
 Revised: 31-Oct-2023
 
-This Highly Adaptive Risk Assessment Model (HARAM) is based on the “dynamic-spread” SIR model published by and [Osborn et al.](https://www.sciencedirect.com/science/article/pii/S0025556421001279)<sup>[[1]](#Reference-1)</sup>, [D'Souza et al.](http://www.aimspress.com/article/doi/10.3934/mbe.2022445)<sup>[[2]](#Reference-2)</sup>, [Berman et al.](http://www.aimspress.com/article/doi/10.3934/mbe.2023663)<sup>[[3]](#Reference-3)</sup> This application serves as a graphical frontend for the model used in the referenced publication. Information about the mathematics behind the model itself is presented in publications. This is being presented as a Regulatory Science Tool and is available under the following submission *{filled in when accepted}*
+This Highly Adaptive Risk Assessment Model (HARAM) is based on the "dynamic-spread" SIR model published by and [Osborn et al.](https://www.sciencedirect.com/science/article/pii/S0025556421001279)<sup>[[1]](#Reference-1)</sup>, [D'Souza et al.](http://www.aimspress.com/article/doi/10.3934/mbe.2022445)<sup>[[2]](#Reference-2)</sup>, [Berman et al.](http://www.aimspress.com/article/doi/10.3934/mbe.2023663)<sup>[[3]](#Reference-3)</sup> This application serves as a graphical frontend for the model used in the referenced publication. Information about the mathematics behind the model itself is presented in publications. This is being presented as a Regulatory Science Tool and is available under the following submission *{filled in when accepted}*
 
 ## Disclaimer
 
@@ -22,7 +22,7 @@ The model allows for the selection of the 4 different scenarios used in the publ
 
 Inputs are broken into 3 different sections. Scenario, Infection Characteristics, and Baseline/Mitigation Tabs. The default values for each section for all of the Scenario/Intervention combinations are the values used for the publications,
 
-## Input – Scenario
+## Input - Scenario
 
 ![Scenario Section of GUI](./imgs/scenario.png)
 
@@ -52,7 +52,7 @@ The Intervention Strategy dropdown allows the user to select one of the 4 differ
 
 Changing the Intervention strategy resets the values in the Baseline/Mitigation Tabs to their default values.
 
-## Input – Infection Characteristics
+## Input - Infection Characteristics
 
 ![Infection Characteristics of the GUI](./imgs/infection.png)
 
@@ -74,7 +74,7 @@ The iterations spinner at the bottom of the Infection Characteristics selects th
 
 The model requires a minium of 200 samples to not cause a singularity condition. If the model after solving does not meet the singularity condition then the model will automatically run again with previous iteration number value plus 50 of iteration samples. It will do this until 200 samples do not meet the singularity condition or until it increases the number of iteration 20 times. If the model reaches the latter condition the model will error out and state to increase the number iterations or change the infection characteristics. Note that each iteration an range from a few seconds to a few minutes of computational time.
 
-## Input – Baseline Tab
+## Input - Baseline Tab
 
 ![Baseline Tab of the GUI](./imgs/baseline.png)
 
@@ -88,7 +88,7 @@ The Baseline Filtration Efficiency is the assumed Filtration Efficiency (FE) of 
 
 Epsilon K or *ε<sub>K</sub>* as outlined in the publications, is the fraction of variation in spread function due to reduction in droplet production resulting from the use of masks. The spread function comprehensively characterizes the infection dynamics over time. Specific information regarding Epsilon K or the spread function can be found in any of the three publications. This values specific to strategies that utilize a facemasks.
 
-## Input – Mitigation Tab
+## Input - Mitigation Tab
 
 ![Mitigation Tab of the GUI](./imgs/mitigation.png)
 
@@ -122,7 +122,7 @@ The minus `-` button is disabled when there is only 1 row remaining. If no mitig
 1. If the model was successfully run, a dialog box will appear indicated it, and the output plots will be displayed.
   <br>![Success Dialog after running the model](./imgs/success.png)
 
-## Output – Plots
+## Output - Plots
 
 ![Plots Tab of the GUI](./imgs/plots.png)
 
@@ -159,9 +159,9 @@ This tab shows the normalized spread function. From the manuscript this is the v
 
 ### Known Issue with Plots
 
-Sometimes after running the model the color the wedge or error bars (if enabled) do not match up to the colors the variable they correspond to. While the data itself is correct, it can cause confusion when looking at the plot to determine which error bars or wedge plot belong to which variable. Sometimes rerunning the model can fix the issue and or changing the inputs, running it, change them back and it again. If this fails, feel free to export the data (See [Exporting Data](#output-–-export-data)) and plot it in external plotting software such as Excel.
+Sometimes after running the model the color the wedge or error bars (if enabled) do not match up to the colors the variable they correspond to. While the data itself is correct, it can cause confusion when looking at the plot to determine which error bars or wedge plot belong to which variable. Sometimes rerunning the model can fix the issue and or changing the inputs, running it, change them back and it again. If this fails, feel free to export the data (See [Exporting Data](#output---export-data)) and plot it in external plotting software such as Excel.
 
-## Output – Bound Plot Options / Slider
+## Output - Bound Plot Options / Slider
 
 ![Plot Options Slider of the GUI](./imgs/plotOptions.png)
 
@@ -181,7 +181,7 @@ The Bound Plot Slider changes its function depending on what option in the [Plot
 | Error Bars | Slider changes the number of error bars on the plot |
 | None | Slider is disabled |
 
-## Output – Export Data
+## Output - Export Data
 
 ![Export Data Button of the GUI](./imgs/export.png)
 
@@ -208,7 +208,7 @@ The exporting of data is not available if the model has not been run. It will al
 ## References
 <!--- cSpell:disable -->
 <ol type="1">
-  <li id="Reference 1">Jenna Osborn, Shayna Berman, Sara Bender-Bier, Gavin D’Souza, Matthew Myers. Retrospective analysis of interventions to epidemics using dynamic simulation of population behavior. Mathematical Biosciences, 2021, 341: 108712. doi: [10.1016/j.mbs.2021.108712](https://www.sciencedirect.com/science/article/pii/S0025556421001279)</li>
+  <li id="Reference 1">Jenna Osborn, Shayna Berman, Sara Bender-Bier, Gavin D'Souza, Matthew Myers. Retrospective analysis of interventions to epidemics using dynamic simulation of population behavior. Mathematical Biosciences, 2021, 341: 108712. doi: [10.1016/j.mbs.2021.108712](https://www.sciencedirect.com/science/article/pii/S0025556421001279)</li>
   <li id="Reference 2">Gavin D'Souza, Jenna Osborn, Shayna Berman, Matthew Myers. Comparison of effectiveness of enhanced infection countermeasures in different scenarios, using a dynamic-spread-function model. Mathematical Biosciences and Engineering, 2022, 19(9): 9571-9589. doi: [10.3934/mbe.2022445](http://www.aimspress.com/article/doi/10.3934/mbe.2022445)</li>
   <li id="Reference 3">Shayna Berman, Gavin D'Souza, Jenna Osborn, Matthew Myers. Comparison of homemade mask designs based on calculated infection risk, using actual COVID-19 infection scenarios. Mathematical Biosciences and Engineering, 2023, 20(8): 14811-14826. doi: [10.3934/mbe.2023663](http://www.aimspress.com/article/doi/10.3934/mbe.2023663</li>
   <li id="Reference 4">Christophe Fraser, Christl A. Donnelly, Simon Cauchemez, William P. Hanage, Maria D. Van Kerkhove, et al. Pandemic Potential of a Strain of Influenza A (H1N1): Early Findings. Science, 2009, 324(5934): 1557-1561. doi: [10.1126/science.1176062](https://www.science.org/doi/10.1126/science.1176062)</li>
