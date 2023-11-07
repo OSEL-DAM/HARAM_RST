@@ -78,7 +78,7 @@ The model requires a minium of 200 samples to not cause a singularity condition.
 
 ![Baseline Tab of the GUI](./imgs/baseline.png)
 
-The Baseline Tab is one of the 2 tabs at the bottom of the input panel and it consists of 2 spinner inputs, the Baseline Filtration Efficiency and Epsilon K. The inputs in this tab are specific to strategies that utilize a facemask. This tab can be switched to it by pressing `Ctrl + B`.
+The Baseline Tab is one of the 2 tabs at the bottom of the input panel and it consists of 2 spinner inputs, the Baseline Filtration Efficiency and Epsilon K. The inputs in this tab are specific to strategies that utilize a facemask. This tab can be switched to it by pressing <kbd>Ctrl</kbd> + <kbd>B</kbd>.
 
 ### Baseline Filtration Efficiency
 
@@ -92,7 +92,7 @@ Epsilon K or *ε<sub>K</sub>* as outlined in the publications, is the fraction o
 
 ![Mitigation Tab of the GUI](./imgs/mitigation.png)
 
-The Mitigation Tab is one of the 2 tabs at the bottom of the input panel and it consists of a single table, and buttons to add, remove and sort the values in the table. This tab can be switched to it by pressing `Ctrl + M`.
+The Mitigation Tab is one of the 2 tabs at the bottom of the input panel and it consists of a single table, and buttons to add, remove and sort the values in the table. This tab can be switched to it by pressing <kbd>Ctrl</kbd> + <kbd>M</kbd>.
 
 ### Mitigation Table
 
@@ -115,7 +115,7 @@ The minus `-` button is disabled when there is only 1 row remaining. If no mitig
 1. If performing UQ (default) set the number of iterations to run and input the standard deviations for the R0 and Mu values. Leave as default if data from the publications is desired.
 1. Input the Baseline data in the baseline tab if running the model with strategies that utilize a facemasks. Leave as default if data from the publications is desired.
 1. Input Mitigation value data to evaluate in the Mitigation Tab. Leave as default if data from the publications is desired.
-1. Click the `Run Scenario` Button in the to run the model or press the `F5` key. Button text will be bolded when the inputs have changed since the model was last run and at startup.
+1. Click the `Run Scenario` Button in the to run the model or press the <kbd>F5</kbd> key. Button text will be bolded when the inputs have changed since the model was last run and at startup.
   <br>![Run Scenario Button of the GUI](./imgs/run.png)
 1. A running dialog will appear. The running of the model can be cancelled by clicking the `Cancel` button in the dialog that appears. Note that running the model can take anywhere from a few seconds to a few minutes depending on the input parameters selected.
   <br>![Model Running Dialog of the GUI](./imgs/running.png)
@@ -147,15 +147,15 @@ Each function of the toolbar and its respective icon perform the following funct
 
 ### New Cases Plot
 
-This tab shows the number of new cases (infections) over time. From the manuscript this is the variable *T*. This tab can be switched to it by pressing `Ctrl + T`.
+This tab shows the number of new cases (infections) over time. From the manuscript this is the variable *T*. This tab can be switched to it by pressing <kbd>Ctrl</kbd> + <kbd>T</kbd>.
 
 ### Active Cases Plot
 
-This tab shows the number of active cases (infections) over time. From the manuscript this is the variable *I*. This tab can be switched to it by pressing `Ctrl + I`.
+This tab shows the number of active cases (infections) over time. From the manuscript this is the variable *I*. This tab can be switched to it by pressing <kbd>Ctrl</kbd> + <kbd>I</kbd>.
 
 ### Normalized Spread Function Plot
 
-This tab shows the normalized spread function. From the manuscript this is the variable lowercase delta normalized to the the initial delta or *δ/δ<sub>0</sub>*. This tab can be switched to it by pressing `Ctrl + D`. Only baseline data is plotted as that what was presented in the publications.
+This tab shows the normalized spread function. From the manuscript this is the variable lowercase delta normalized to the the initial delta or *δ/δ<sub>0</sub>*. This tab can be switched to it by pressing <kbd>Ctrl</kbd> + <kbd>D</kbd>. Only baseline data is plotted as that what was presented in the publications.
 
 ### Known Issue with Plots
 
@@ -185,7 +185,7 @@ The Bound Plot Slider changes its function depending on what option in the [Plot
 
 ![Export Data Button of the GUI](./imgs/export.png)
 
-The interface allows for the export of data that was produced by the model. Clicking the `Export Data` button or pressing `Ctrl + S` will bring up a "Save As" with a drop down box that allows the data to be exported in  3 different file formats, CSV files (.csv), an Excel Spreadsheet (.xlsx), and a MATLAB Data File (.mat). The data that is exported results in 5 variables and are described in the table below.
+The interface allows for the export of data that was produced by the model. Clicking the `Export Data` button or pressing <kbd>Ctrl</kbd> + <kbd> S</kbd> will bring up a "Save As" with a drop down box that allows the data to be exported in  3 different file formats, CSV files (.csv), an Excel Spreadsheet (.xlsx), and a MATLAB Data File (.mat). The data that is exported results in 5 variables and are described in the table below.
 
 | Export Variable | Description of Variable |
 | :---: | :--- |
@@ -203,7 +203,7 @@ Each type of export handles the 5 variables differently and the description of h
 | XLSX | Each variable exported as a sheet in the workbook, SigCount and Inputs are converted to tables |
 | MAT | Exports a MATLAB data file containing the T, I, and delta as a table, SigCount being a logical array, and Inputs being a structure. |
 
-The exporting of data is not available if the model has not been run. It will also present an alert if `Export Data` has been clicked or  `Ctrl + S` has been pressed and the inputs have been changed before the model has been re run.
+The exporting of data is not available if the model has not been run. It will also present an alert if `Export Data` has been clicked or  <kbd>Ctrl</kbd> + <kbd>S</kbd> has been pressed and the inputs have been changed before the model has been re run.
 
 ## References
 <!--- cSpell:disable -->
