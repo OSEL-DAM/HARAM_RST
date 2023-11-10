@@ -20,7 +20,7 @@ The model allows for the selection of the 4 different scenarios used in the publ
 
 ![GUI Layout at Startup](./imgs/startup.png)
 
-Inputs are broken into 3 different sections. Scenario, Infection Characteristics, and Baseline/Mitigation Tabs. The default values for each section for all of the Scenario/Intervention combinations are the values used for the publications,
+Inputs are broken into 3 different sections. Scenario, Infection Characteristics, and Baseline/Mitigation Tabs. The default values for each section for all of the Scenario/Intervention combinations are the values used for the publications.
 
 ## Input - Scenario
 
