@@ -4,7 +4,7 @@
 
 Written By: Alexander Herman, Gavin D'Souza, Matthew Myers<br>
 U.S. Food and Drug Administration<br>
-Revised: 07-Nov-2023
+Revised: 20-Nov-2023
 
 This Highly Adaptive Risk Assessment Model (HARAM) is based on the "dynamic-spread" Susceptible-Infected-Removed (SIR) model published by and [Osborn et al.](https://www.sciencedirect.com/science/article/pii/S0025556421001279)<sup>[[1]](#Reference-1)</sup>, [D'Souza et al.](http://www.aimspress.com/article/doi/10.3934/mbe.2022445)<sup>[[2]](#Reference-2)</sup>, [Berman et al.](http://www.aimspress.com/article/doi/10.3934/mbe.2023663)<sup>[[3]](#Reference-3)</sup> This application serves as a graphical frontend for the model used in the referenced publication. Information about the mathematics behind the model itself is presented in publications. <!--This is being presented as a Regulatory Science Tool and is available under the following submission *{filled in when accepted}* -->
 
