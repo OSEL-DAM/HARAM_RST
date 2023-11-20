@@ -1,18 +1,32 @@
 # Highly Adaptive Risk Assessment Mode (HARAM) Graphical User Interface (GUI)
 
-**Highly Adaptive Risk Assessment Mode (HARAM) Graphical User Interface (GUI) for the "dynamic-spread" SIR model.**
+**Highly Adaptive Risk Assessment Mode (HARAM) Graphical User Interface (GUI) for the "dynamic-spread" Susceptible-Infected-Removed (SIR) model.**
 
 Written By: Alexander Herman, Gavin D'Souza, Matthew Myers<br>
 U.S. Food and Drug Administration<br>
 Revised: 07-Nov-2023
 
-This Highly Adaptive Risk Assessment Model (HARAM) is based on the "dynamic-spread" Susceptible-Infected-Removed (SIR) model published by and [Osborn et al.](https://www.sciencedirect.com/science/article/pii/S0025556421001279)<sup>[[1]](#Reference-1)</sup>, [D'Souza et al.](http://www.aimspress.com/article/doi/10.3934/mbe.2022445)<sup>[[2]](#Reference-2)</sup>, [Berman et al.](http://www.aimspress.com/article/doi/10.3934/mbe.2023663)<sup>[[3]](#Reference-3)</sup> This application serves as a graphical frontend for the model used in the referenced publication. Information about the mathematics behind the model itself is presented in publications. This is being presented as a Regulatory Science Tool and is available under the following submission *{filled in when accepted}*
+This Highly Adaptive Risk Assessment Model (HARAM) is based on the "dynamic-spread" Susceptible-Infected-Removed (SIR) model published by and [Osborn et al.](https://www.sciencedirect.com/science/article/pii/S0025556421001279)<sup>[[1]](#Reference-1)</sup>, [D'Souza et al.](http://www.aimspress.com/article/doi/10.3934/mbe.2022445)<sup>[[2]](#Reference-2)</sup>, [Berman et al.](http://www.aimspress.com/article/doi/10.3934/mbe.2023663)<sup>[[3]](#Reference-3)</sup> This application serves as a graphical frontend for the model used in the referenced publication. Information about the mathematics behind the model itself is presented in publications. <!--This is being presented as a Regulatory Science Tool and is available under the following submission *{filled in when accepted}* -->
 
 ## Disclaimer
 
 * This code is available under public domain, free of all copyright, and may be freely reproduced, distributed, transmitted, modified, built upon, or otherwise used by anyone for any lawful purpose. However, this license does not govern the software needed to run this script and dependent functions and are governed under a separate license. 
 * This code, and its dependent functions are listed "AS IS" and does not come with any expressed or implied warranty. The authors of this code and its dependent functions are not liable for any damages arising from the use of this code and its dependent functions.
 * The use of the files in this repository, the code presented in it, its dependent functions, the software required to run it, or the code's outputs does not constitute an endorsement from the U.S. Food and Drug Administration or U.S. Department of Health and Human Services.
+
+## Download and Starting the GUI
+
+The model is released as a Windows executable that was compiled with the MATLAB Compiler. The source code is also available for users who already have MATLAB installed.
+
+### Windows Executable
+
+The Windows executable can accessed from the *Releases* section of the repository. The executable is an online installer that installs both the model and the MATLAB Runtime, the latter of which is required in order to run the model. While the model itself is small in size, the Runtime requires at least 2.1 GB of disk space. The installation process also requires an internet connection to download the required files. The required R2023a Runtime can also be downloaded [here](https://www.mathworks.com/products/compiler/matlab-runtime.html). After the installation the model can be found in Start Menu, or on a Shortcut on the Desktop if selected. We suggest this only be run on computers with at least 8 GB of memory.
+
+**NOTE**: The installer is not signed. As a result, Windows and potentially the web browser when downloading the model will flag the installer as a file that can harm your computer. The executable is safe for your computer and is safe to run without it affecting other applications or the Windows installation.
+
+### MATLAB/Source Code
+
+The model source code is also provided in the repository for the model. It is available as a standard MATLAB script or a MATLAB App designed with the App Designer. All of the MATLAB functions and data files in the root of the repository are required for the model to run. The Statistic and Machine Learning (SML) Toolbox is also required. The only two functions that require the SML Toolbox are `normpdf` and `normcdf` within the `LHS.m` function. If running from MATLAB, the model can be launched from running either `HARAM_App_Published.mlapp` or `HARAM_App_Published_exported.m`. 
 
 ## Layout
 
@@ -68,7 +82,7 @@ The infection recovery rate (*Mu* or *μ* as outlined in the publications) is ra
 
 ### Iterations
 
-The iterations spinner at the bottom of the Infection Characteristics selects the number of uncertainty simulations to perform. The UQ analysis excutes the model the number of times specified by the iterations spinner. It vary the inputs of the Reproduction Number (*R<sub>0</sub>*) and Infection Recovery Rate (*Mu*) across an even distribution based on the values based on their values and standard deviations. In this interface, the UQ analysis is optional but it is on by default, to disable it, change the number of iterations in the iteration spinner to 1. Standard deviations of Reproduction Number (*R<sub>0</sub>*) and Infection Recovery Rate (*Mu*) are not required as well when the number of iterations is set to 1. If UQ analysis is desired, the number of iterations must be above 200, as having the number iterations any number lower would reduce the reliability of the model.
+The iterations spinner at the bottom of the Infection Characteristics selects the number of uncertainty simulations to perform. The UQ analysis executes the model the number of times specified by the iterations spinner. It vary the inputs of the Reproduction Number (*R<sub>0</sub>*) and Infection Recovery Rate (*Mu*) across an even distribution based on the values based on their values and standard deviations. In this interface, the UQ analysis is optional but it is on by default, to disable it, change the number of iterations in the iteration spinner to 1. Standard deviations of Reproduction Number (*R<sub>0</sub>*) and Infection Recovery Rate (*Mu*) are not required as well when the number of iterations is set to 1. If UQ analysis is desired, the number of iterations must be above 200, as having the number iterations any number lower would reduce the reliability of the model.
 
 #### Auto Iteration
 
